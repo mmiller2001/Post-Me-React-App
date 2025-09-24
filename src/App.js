@@ -6,6 +6,7 @@ import HomePage from './components/HomePage';
 import LoadingSpinner from './components/LoadingSpinner';
 import { useAuth } from './contexts/AuthContext';
 
+// This is a custom comment from marlon working branch.
 // Protected Route component
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
