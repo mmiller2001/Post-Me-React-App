@@ -1,5 +1,4 @@
 [![CI](https://github.com/mmiller2001/Post-Me-React-App/actions/workflows/ci.yml/badge.svg)](https://github.com/mmiller2001/Post-Me-React-App/actions/workflows/ci.yml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/REPLACE_WITH_SITE_ID/deploy-status)](https://app.netlify.com/sites/REPLACE_WITH_SITE_NAME/deploys)
 
 # React Authentication App
 
