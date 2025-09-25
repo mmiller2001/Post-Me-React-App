@@ -1,10 +1,12 @@
 import React from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { Navigate } from 'react-router-dom';
+import { useTheme } from '../contexts/ThemeContext';
 import './HomePage.css';
 
 const HomePage = () => {
   const { isAuthenticated, user, logout } = useAuth();
+  const { theme, setTheme, isDark } = useTheme();
 
   // Redirect if not authenticated
   if (!isAuthenticated) {
@@ -22,14 +24,27 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-      <div className="home-header">
-        <div className="header-content">
-          <h1>Welcome, {user?.username}!</h1>
-          <button onClick={handleLogout} className="logout-button">
-            Logout
-          </button>
+      <nav className="top-nav">
+        <div className="nav-inner">
+          <div className="brand">Home</div>
+          <div className="nav-actions">
+            <div className="theme-selector">
+              <label htmlFor="theme" className="visually-hidden">Theme</label>
+              <select
+                id="theme"
+                value={theme}
+                onChange={(e) => setTheme(e.target.value)}
+              >
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+            <button onClick={handleLogout} className="logout-button">
+              Logout
+            </button>
+          </div>
         </div>
-      </div>
+      </nav>
       
       <div className="home-content">
         <div className="welcome-card">
