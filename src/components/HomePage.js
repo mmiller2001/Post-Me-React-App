@@ -6,7 +6,7 @@ import './HomePage.css';
 
 const HomePage = () => {
   const { isAuthenticated, user, logout } = useAuth();
-  const { theme, setTheme, isDark } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   // Redirect if not authenticated
   if (!isAuthenticated) {
